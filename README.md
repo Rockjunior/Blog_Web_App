@@ -16,5 +16,5 @@ Below are screenshots and a demonstration video showcasing the application's int
 ![Front_Page](images/screencapture-127-0-0-1-3000-index-html-2025-07-17-10_53_34.png)
 
 ## Demo Video
-> **Note:** GitHub does not support direct video playback in markdown files.  
+  
 > To view the demonstration, [download the demo video](videos/simple_blog_app%20-%20Made%20with%20Clipchamp.mp4) and play it locally.
