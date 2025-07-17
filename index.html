@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog App</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); margin: 0; padding: 0; }
+        .container { max-width: 650px; margin: 48px auto; background: #fff; padding: 32px 28px 28px 28px; border-radius: 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+        h1 { text-align: center; letter-spacing: 1px; color: #333; margin-bottom: 18px; }
+        .search-bar { display: flex; justify-content: center; margin-bottom: 24px; }
+        .search-bar input { width: 100%; max-width: 400px; padding: 10px 14px; border: 1.5px solid #fda085; border-radius: 8px; font-size: 1rem; transition: border 0.2s; }
+        .search-bar input:focus { border: 1.5px solid #f6d365; outline: none; }
+        form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+        input, textarea { padding: 10px 14px; border: 1.5px solid #fda085; border-radius: 8px; font-size: 1rem; transition: border 0.2s; }
+        input:focus, textarea:focus { border: 1.5px solid #f6d365; outline: none; }
+        button { padding: 12px; border: none; border-radius: 8px; background: linear-gradient(90deg, #f6d365 0%, #fda085 100%); color: #fff; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(253,160,133,0.08); transition: background 0.2s, transform 0.1s; }
+        button:hover { background: linear-gradient(90deg, #fda085 0%, #f6d365 100%); transform: translateY(-2px) scale(1.03); }
+        .post { background: #fff7f0; border: 1.5px solid #fda085; border-radius: 10px; padding: 18px 16px 16px 16px; margin-bottom: 18px; position: relative; box-shadow: 0 2px 8px rgba(253,160,133,0.06); opacity: 0; transform: translateY(20px); animation: fadeInUp 0.5s forwards; }
+        .post-title { font-weight: bold; margin-bottom: 8px; font-size: 1.1rem; color: #f57c00; }
+        .post-content { color: #444; margin-bottom: 8px; }
+        .delete-btn { position: absolute; top: 16px; right: 16px; background: #ff5e62; color: #fff; border: none; border-radius: 6px; padding: 5px 12px; cursor: pointer; font-size: 0.95rem; transition: background 0.2s; }
+        .delete-btn:hover { background: #d7263d; }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .empty-state { text-align: center; color: #aaa; font-size: 1.1rem; margin-top: 32px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Blog App</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search posts..." />
+        </div>
+        <form id="postForm">
+            <input type="text" id="title" placeholder="Post Title" required />
+            <textarea id="content" placeholder="Write your post here..." rows="4" required></textarea>
+            <button type="submit">Add Post</button>
+        </form>
+        <div id="postsContainer"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
